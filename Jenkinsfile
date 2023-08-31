@@ -1,6 +1,6 @@
 pipeline
 {
-    agent any 
+    agent any
     stages
     {
         stage('Continous download')
@@ -21,7 +21,7 @@ pipeline
         {
             steps
             {
-             deploy adapters: [tomcat9(credentialsId: '715d4b0c-a072-4b12-b4be-39a459688e4d', path: '', url: 'http://50.19.16.205:8080')], contextPath: 'Testingg', war: '**/*.war'
+             deploy adapters: [tomcat9(credentialsId: '715d4b0c-a072-4b12-b4be-39a459688e4d', path: '', url: 'http://54.92.132.81:8080')], contextPath: 'Testing1', war: '**/*.war'
             }
         }
         stage('Continous Testing')
@@ -35,11 +35,11 @@ pipeline
         {
             steps
             {
-            deploy adapters: [tomcat9(credentialsId: 'b0004e0c-730f-44df-8da9-aaed37f6af99', path: '', url: 'http://54.88.0.51:8080')], contextPath: 'Prodapppp', war: '**/*.war'
+            deploy adapters: [tomcat9(credentialsId: 'b0004e0c-730f-44df-8da9-aaed37f6af99', path: '', url: 'http://54.167.209.103:8080')], contextPath: 'ProdApp1', war: '**/*.war'
             }
         }
-        
-        
+
+
     }
 }
 
