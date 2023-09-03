@@ -20,4 +20,5 @@ node('built-in')
     stage('ContinousDelivery')
     {
         deploy adapters: [tomcat9(credentialsId: 'b0004e0c-730f-44df-8da9-aaed37f6af99', path: '', url: 'http://34.228.238.4:8080')], contextPath: 'ProdApppppppp', war: '**/*.war'
+    }
 }
